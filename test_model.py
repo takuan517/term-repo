@@ -3,12 +3,12 @@ import numpy as np
 from keras.preprocessing.image import img_to_array, load_img
 import time
 
-start = time.time()
-jpg_name = './data/test/001.jpg'
+jpg_name = './data/test/0.jpg'
 my_model = './data/human_model5.h5'
 
 model = load_model(my_model)
 
+start = time.time()
 img_path = (jpg_name)
 img = img_to_array(load_img(img_path, target_size = (256,144)))
 img_nad = img_to_array(img)/255
